@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProyectoP5.Models.EmpresaCRUDModel>
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+    <thead>
+        <tr>
+            <th data-column-id="1" data-type="numeric">@Html.DisplayNameFor(model => model.IdEmpresa)</th>
+            <th data-column-id="2">@Html.DisplayNameFor(model => model.NombreEmpresa)</th>
+            <th data-column-id="3" data-order="desc">@Html.DisplayNameFor(model => model.TelefonoEmpresa)</th>
+            <th data-column-id="4" data-order="desc">@Html.DisplayNameFor(model => model.CorreoEmpresa)</th>
+            <th data-column-id="5" data-order="desc">@Html.DisplayNameFor(model => model.DireccionEmpresa)</th>
+            <th data-column-id="6" data-sortable="false">Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TelefonoEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CorreoEmpresa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DireccionEmpresa)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarEmpresa", new { id = item.IdEmpresa }) |
+                    @Html.ActionLink("Eliminar", "EmpresaCRUDDelete", new { id = item.IdEmpresa })
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

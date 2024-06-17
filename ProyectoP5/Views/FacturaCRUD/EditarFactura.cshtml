@@ -1,0 +1,79 @@
+﻿@model ProyectoP5.Models.FacturaCRUDModel
+
+@{
+    ViewBag.Title = "EditarFactura";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/_LayoutEditarCRUD.cshtml")
+
+<section id="content">
+    <div class="container">
+        <div class="content__header">
+            <h2>Actualizar <small>Puede editar aqui</small></h2>
+        </div>
+
+        <div class="invoice" style="background-color: #181f23">
+            @using (Html.BeginForm())
+            {
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style=" color: #fbfbfb">Editar Factura</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="card__body">
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.NUMFACTURA, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.NUMFACTURA), disabled = "disable" })
+                                @Html.HiddenFor(model => model.NUMFACTURA)
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="card__body">
+                                @Html.TextBoxFor(model => model.FECHA, new { @class = "form-control date-time-picker", type = "datetime", placeholder = Html.DisplayNameFor(model => model.FECHA), required = "required" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="form-group form-group--select">
+                                @Html.DropDownListFor(e => e.IDEMPRESA, Model.EMPRESALIST, new { @class = "form-control", required = "required", data_placeholder = "Seleccione una Empresa" })
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.IDCLIENTE, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.IDCLIENTE), required = "required", type = "text", data_mask = "0-0000-0000", maxlength = "19" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.PRECIOTOTAL, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.PRECIOTOTAL), required = "required", type = "number" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <br>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default">Actualizar</button>
+                        <a type="button" class="btn btn-default" href="@Url.Action("AdminCRUD", "Admin")">Cerrar</a>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>
+
+@section Scripts{
+    <script type="text/javascript">
+
+        $('[class="form-control date-time-picker"]').datetimepicker({
+            format: 'DD-MM-YYYY HH:mm:ss'
+        });
+    </script>
+}

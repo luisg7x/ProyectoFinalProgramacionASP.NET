@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Tittle = "LoggedIn";
+}
+
+@if(Session["usuario"] != null){
+    <li class='submenu'><a href='#'><span class='icon-user'></span>Bienvenido @Session["usuario"].ToString() <span class='caret icon-chevron-down'> </span></a> <ul class='hijos'> <li><a href='@Url.Action("Logout", "Inicio")'><span class='icon-dot-single'> </span>Cerrar Sesion</a></li><li><a href='@Url.Action("EditarPerfil", "Inicio")'><span class='icon-dot-single'> </span>Ver Perfil</a></li> </ul> </li>
+        }
+        else{
+    <li><a href='@Url.Action("Login", "Inicio")'><span class='icon-user'></span>Iniciar Sesion</a></li>
+        }
+

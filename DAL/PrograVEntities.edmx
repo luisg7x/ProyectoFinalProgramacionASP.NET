@@ -1,0 +1,455 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="PrograVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="IDADMIN" />
+          </Key>
+          <Property Name="IDADMIN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDOS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CONTRASEÑA" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clientes">
+          <Key>
+            <PropertyRef Name="IDCLIENTE" />
+          </Key>
+          <Property Name="IDCLIENTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="APELLIDOS" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="SEXO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NUMTARJETA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CORREO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CONTRASEÑA" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DetalleFacturas">
+          <Key>
+            <PropertyRef Name="IDDETALLEFACTURA" />
+          </Key>
+          <Property Name="IDDETALLEFACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDPRODUCTO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NUMFACTURA" Type="int" Nullable="false" />
+          <Property Name="CANTIDADPRODUCTO" Type="int" Nullable="false" />
+          <Property Name="PRECIOPARCIAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Empresas">
+          <Key>
+            <PropertyRef Name="IDEMPRESA" />
+          </Key>
+          <Property Name="IDEMPRESA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="TELEFONO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CORREO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="DIRECCION" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Facturas">
+          <Key>
+            <PropertyRef Name="NUMFACTURA" />
+          </Key>
+          <Property Name="NUMFACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IDEMPRESA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="PRECIOTOTAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="IDCLIENTE" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="FECHA" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Productos">
+          <Key>
+            <PropertyRef Name="IDPRODUCTO" />
+          </Key>
+          <Property Name="IDPRODUCTO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MARCA" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="MODELO" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="IDTIPOPRODUCTO" Type="int" Nullable="false" />
+          <Property Name="FOTO" Type="image" />
+          <Property Name="PRECIOUNITARIO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+          <Property Name="CANTIDADDISPONIBLE" Type="int" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="varchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TipoProductos">
+          <Key>
+            <PropertyRef Name="IDTIPOPRODUCTO" />
+          </Key>
+          <Property Name="IDTIPOPRODUCTO" Type="int" Nullable="false" />
+          <Property Name="NOMBRETIPOPRODUCTO" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__DetalleFa__IDPRO__31EC6D26">
+          <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+          <End Role="DetalleFacturas" Type="Self.DetalleFacturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Productos">
+              <PropertyRef Name="IDPRODUCTO" />
+            </Principal>
+            <Dependent Role="DetalleFacturas">
+              <PropertyRef Name="IDPRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleFa__NUMFA__32E0915F">
+          <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
+          <End Role="DetalleFacturas" Type="Self.DetalleFacturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Facturas">
+              <PropertyRef Name="NUMFACTURA" />
+            </Principal>
+            <Dependent Role="DetalleFacturas">
+              <PropertyRef Name="NUMFACTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Facturas__IDCLIE__33D4B598">
+          <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+          <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Clientes">
+              <PropertyRef Name="IDCLIENTE" />
+            </Principal>
+            <Dependent Role="Facturas">
+              <PropertyRef Name="IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Facturas__IDEMPR__34C8D9D1">
+          <End Role="Empresas" Type="Self.Empresas" Multiplicity="1" />
+          <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresas">
+              <PropertyRef Name="IDEMPRESA" />
+            </Principal>
+            <Dependent Role="Facturas">
+              <PropertyRef Name="IDEMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__IDTIP__35BCFE0A">
+          <End Role="TipoProductos" Type="Self.TipoProductos" Multiplicity="1" />
+          <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProductos">
+              <PropertyRef Name="IDTIPOPRODUCTO" />
+            </Principal>
+            <Dependent Role="Productos">
+              <PropertyRef Name="IDTIPOPRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PrograVModelStoreContainer">
+          <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DetalleFacturas" EntityType="Self.DetalleFacturas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Empresas" EntityType="Self.Empresas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TipoProductos" EntityType="Self.TipoProductos" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__DetalleFa__IDPRO__31EC6D26" Association="Self.FK__DetalleFa__IDPRO__31EC6D26">
+            <End Role="Productos" EntitySet="Productos" />
+            <End Role="DetalleFacturas" EntitySet="DetalleFacturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleFa__NUMFA__32E0915F" Association="Self.FK__DetalleFa__NUMFA__32E0915F">
+            <End Role="Facturas" EntitySet="Facturas" />
+            <End Role="DetalleFacturas" EntitySet="DetalleFacturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Facturas__IDCLIE__33D4B598" Association="Self.FK__Facturas__IDCLIE__33D4B598">
+            <End Role="Clientes" EntitySet="Clientes" />
+            <End Role="Facturas" EntitySet="Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Facturas__IDEMPR__34C8D9D1" Association="Self.FK__Facturas__IDEMPR__34C8D9D1">
+            <End Role="Empresas" EntitySet="Empresas" />
+            <End Role="Facturas" EntitySet="Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__IDTIP__35BCFE0A" Association="Self.FK__Productos__IDTIP__35BCFE0A">
+            <End Role="TipoProductos" EntitySet="TipoProductos" />
+            <End Role="Productos" EntitySet="Productos" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PrograVModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="PrograVEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="PrograVModel.Admin" />
+          <EntitySet Name="Clientes" EntityType="PrograVModel.Cliente" />
+          <EntitySet Name="DetalleFacturas" EntityType="PrograVModel.DetalleFactura" />
+          <EntitySet Name="Empresas" EntityType="PrograVModel.Empresa" />
+          <EntitySet Name="Facturas" EntityType="PrograVModel.Factura" />
+          <EntitySet Name="Productos" EntityType="PrograVModel.Producto" />
+          <EntitySet Name="TipoProductos" EntityType="PrograVModel.TipoProducto" />
+          <AssociationSet Name="FK__Facturas__IDCLIE__33D4B598" Association="PrograVModel.FK__Facturas__IDCLIE__33D4B598">
+            <End Role="Cliente" EntitySet="Clientes" />
+            <End Role="Factura" EntitySet="Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleFa__IDPRO__31EC6D26" Association="PrograVModel.FK__DetalleFa__IDPRO__31EC6D26">
+            <End Role="Producto" EntitySet="Productos" />
+            <End Role="DetalleFactura" EntitySet="DetalleFacturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__DetalleFa__NUMFA__32E0915F" Association="PrograVModel.FK__DetalleFa__NUMFA__32E0915F">
+            <End Role="Factura" EntitySet="Facturas" />
+            <End Role="DetalleFactura" EntitySet="DetalleFacturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Facturas__IDEMPR__34C8D9D1" Association="PrograVModel.FK__Facturas__IDEMPR__34C8D9D1">
+            <End Role="Empresa" EntitySet="Empresas" />
+            <End Role="Factura" EntitySet="Facturas" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Productos__IDTIP__35BCFE0A" Association="PrograVModel.FK__Productos__IDTIP__35BCFE0A">
+            <End Role="TipoProducto" EntitySet="TipoProductos" />
+            <End Role="Producto" EntitySet="Productos" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="IDADMIN" />
+          </Key>
+          <Property Name="IDADMIN" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDOS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CONTRASEÑA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Cliente">
+          <Key>
+            <PropertyRef Name="IDCLIENTE" />
+          </Key>
+          <Property Name="IDCLIENTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="APELLIDOS" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SEXO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NUMTARJETA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="USUARIO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CONTRASEÑA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Facturas" Relationship="PrograVModel.FK__Facturas__IDCLIE__33D4B598" FromRole="Cliente" ToRole="Factura" />
+        </EntityType>
+        <EntityType Name="DetalleFactura">
+          <Key>
+            <PropertyRef Name="IDDETALLEFACTURA" />
+          </Key>
+          <Property Name="IDDETALLEFACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDPRODUCTO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NUMFACTURA" Type="Int32" Nullable="false" />
+          <Property Name="CANTIDADPRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="PRECIOPARCIAL" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <NavigationProperty Name="Producto" Relationship="PrograVModel.FK__DetalleFa__IDPRO__31EC6D26" FromRole="DetalleFactura" ToRole="Producto" />
+          <NavigationProperty Name="Factura" Relationship="PrograVModel.FK__DetalleFa__NUMFA__32E0915F" FromRole="DetalleFactura" ToRole="Factura" />
+        </EntityType>
+        <EntityType Name="Empresa">
+          <Key>
+            <PropertyRef Name="IDEMPRESA" />
+          </Key>
+          <Property Name="IDEMPRESA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NOMBRE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TELEFONO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CORREO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DIRECCION" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Facturas" Relationship="PrograVModel.FK__Facturas__IDEMPR__34C8D9D1" FromRole="Empresa" ToRole="Factura" />
+        </EntityType>
+        <EntityType Name="Factura">
+          <Key>
+            <PropertyRef Name="NUMFACTURA" />
+          </Key>
+          <Property Name="NUMFACTURA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IDEMPRESA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PRECIOTOTAL" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="IDCLIENTE" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FECHA" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="Cliente" Relationship="PrograVModel.FK__Facturas__IDCLIE__33D4B598" FromRole="Factura" ToRole="Cliente" />
+          <NavigationProperty Name="DetalleFacturas" Relationship="PrograVModel.FK__DetalleFa__NUMFA__32E0915F" FromRole="Factura" ToRole="DetalleFactura" />
+          <NavigationProperty Name="Empresa" Relationship="PrograVModel.FK__Facturas__IDEMPR__34C8D9D1" FromRole="Factura" ToRole="Empresa" />
+        </EntityType>
+        <EntityType Name="Producto">
+          <Key>
+            <PropertyRef Name="IDPRODUCTO" />
+          </Key>
+          <Property Name="IDPRODUCTO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MARCA" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MODELO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="IDTIPOPRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="FOTO" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="PRECIOUNITARIO" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="CANTIDADDISPONIBLE" Type="Int32" Nullable="false" />
+          <Property Name="DESCRIPCION" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DetalleFacturas" Relationship="PrograVModel.FK__DetalleFa__IDPRO__31EC6D26" FromRole="Producto" ToRole="DetalleFactura" />
+          <NavigationProperty Name="TipoProducto" Relationship="PrograVModel.FK__Productos__IDTIP__35BCFE0A" FromRole="Producto" ToRole="TipoProducto" />
+        </EntityType>
+        <EntityType Name="TipoProducto">
+          <Key>
+            <PropertyRef Name="IDTIPOPRODUCTO" />
+          </Key>
+          <Property Name="IDTIPOPRODUCTO" Type="Int32" Nullable="false" />
+          <Property Name="NOMBRETIPOPRODUCTO" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Productos" Relationship="PrograVModel.FK__Productos__IDTIP__35BCFE0A" FromRole="TipoProducto" ToRole="Producto" />
+        </EntityType>
+        <Association Name="FK__Facturas__IDCLIE__33D4B598">
+          <End Type="PrograVModel.Cliente" Role="Cliente" Multiplicity="1" />
+          <End Type="PrograVModel.Factura" Role="Factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Cliente">
+              <PropertyRef Name="IDCLIENTE" />
+            </Principal>
+            <Dependent Role="Factura">
+              <PropertyRef Name="IDCLIENTE" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleFa__IDPRO__31EC6D26">
+          <End Type="PrograVModel.Producto" Role="Producto" Multiplicity="1" />
+          <End Type="PrograVModel.DetalleFactura" Role="DetalleFactura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Producto">
+              <PropertyRef Name="IDPRODUCTO" />
+            </Principal>
+            <Dependent Role="DetalleFactura">
+              <PropertyRef Name="IDPRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__DetalleFa__NUMFA__32E0915F">
+          <End Type="PrograVModel.Factura" Role="Factura" Multiplicity="1" />
+          <End Type="PrograVModel.DetalleFactura" Role="DetalleFactura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Factura">
+              <PropertyRef Name="NUMFACTURA" />
+            </Principal>
+            <Dependent Role="DetalleFactura">
+              <PropertyRef Name="NUMFACTURA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Facturas__IDEMPR__34C8D9D1">
+          <End Type="PrograVModel.Empresa" Role="Empresa" Multiplicity="1" />
+          <End Type="PrograVModel.Factura" Role="Factura" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Empresa">
+              <PropertyRef Name="IDEMPRESA" />
+            </Principal>
+            <Dependent Role="Factura">
+              <PropertyRef Name="IDEMPRESA" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Productos__IDTIP__35BCFE0A">
+          <End Type="PrograVModel.TipoProducto" Role="TipoProducto" Multiplicity="1" />
+          <End Type="PrograVModel.Producto" Role="Producto" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TipoProducto">
+              <PropertyRef Name="IDTIPOPRODUCTO" />
+            </Principal>
+            <Dependent Role="Producto">
+              <PropertyRef Name="IDTIPOPRODUCTO" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PrograVModelStoreContainer" CdmEntityContainer="PrograVEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="PrograVModel.Admin">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="IDADMIN" ColumnName="IDADMIN" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clientes">
+            <EntityTypeMapping TypeName="PrograVModel.Cliente">
+              <MappingFragment StoreEntitySet="Clientes">
+                <ScalarProperty Name="CONTRASEÑA" ColumnName="CONTRASEÑA" />
+                <ScalarProperty Name="USUARIO" ColumnName="USUARIO" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="NUMTARJETA" ColumnName="NUMTARJETA" />
+                <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+                <ScalarProperty Name="APELLIDOS" ColumnName="APELLIDOS" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DetalleFacturas">
+            <EntityTypeMapping TypeName="PrograVModel.DetalleFactura">
+              <MappingFragment StoreEntitySet="DetalleFacturas">
+                <ScalarProperty Name="PRECIOPARCIAL" ColumnName="PRECIOPARCIAL" />
+                <ScalarProperty Name="CANTIDADPRODUCTO" ColumnName="CANTIDADPRODUCTO" />
+                <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+                <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
+                <ScalarProperty Name="IDDETALLEFACTURA" ColumnName="IDDETALLEFACTURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empresas">
+            <EntityTypeMapping TypeName="PrograVModel.Empresa">
+              <MappingFragment StoreEntitySet="Empresas">
+                <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
+                <ScalarProperty Name="CORREO" ColumnName="CORREO" />
+                <ScalarProperty Name="TELEFONO" ColumnName="TELEFONO" />
+                <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+                <ScalarProperty Name="IDEMPRESA" ColumnName="IDEMPRESA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Facturas">
+            <EntityTypeMapping TypeName="PrograVModel.Factura">
+              <MappingFragment StoreEntitySet="Facturas">
+                <ScalarProperty Name="FECHA" ColumnName="FECHA" />
+                <ScalarProperty Name="IDCLIENTE" ColumnName="IDCLIENTE" />
+                <ScalarProperty Name="PRECIOTOTAL" ColumnName="PRECIOTOTAL" />
+                <ScalarProperty Name="IDEMPRESA" ColumnName="IDEMPRESA" />
+                <ScalarProperty Name="NUMFACTURA" ColumnName="NUMFACTURA" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Productos">
+            <EntityTypeMapping TypeName="PrograVModel.Producto">
+              <MappingFragment StoreEntitySet="Productos">
+                <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+                <ScalarProperty Name="CANTIDADDISPONIBLE" ColumnName="CANTIDADDISPONIBLE" />
+                <ScalarProperty Name="PRECIOUNITARIO" ColumnName="PRECIOUNITARIO" />
+                <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+                <ScalarProperty Name="IDTIPOPRODUCTO" ColumnName="IDTIPOPRODUCTO" />
+                <ScalarProperty Name="MODELO" ColumnName="MODELO" />
+                <ScalarProperty Name="MARCA" ColumnName="MARCA" />
+                <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TipoProductos">
+            <EntityTypeMapping TypeName="PrograVModel.TipoProducto">
+              <MappingFragment StoreEntitySet="TipoProductos">
+                <ScalarProperty Name="NOMBRETIPOPRODUCTO" ColumnName="NOMBRETIPOPRODUCTO" />
+                <ScalarProperty Name="IDTIPOPRODUCTO" ColumnName="IDTIPOPRODUCTO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

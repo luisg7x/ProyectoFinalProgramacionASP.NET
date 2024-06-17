@@ -1,0 +1,217 @@
+﻿@model IEnumerable<ProyectoP5.Models.HistorialComprasModel>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<!--[if IE 9 ]><html class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Factura</title>
+
+    <!-- Vendors -->
+    <!-- Animate CSS -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/animate.css/animate.min.css")" rel="stylesheet">
+
+    <!-- Material Design Icons -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css")" rel="stylesheet">
+
+    <!-- Malihu Scrollbar -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css")" rel="stylesheet">
+
+    <!-- Site CSS -->
+    <link href="@Url.Content("~/content/Admin/css/app-1.min.css")" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <h2 class="hidden-xs" style="font:38px 'Freestyle Script';">
+                Gaming PC
+            </h2>
+            <i class="logo__trigger zmdi zmdi-menu" data-mae-action="block-open" data-mae-target="#navigation"></i>
+        </div>
+    </header>
+
+    <section id="main">
+
+
+        <aside id="navigation">
+            <div class="navigation__header">
+                <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+            </div>
+            <div class="navigation__toggles">
+                <a href="@Url.Action("Index", "Inicio")">
+                    <i class="zmdi zmdi-home"></i>
+                </a>
+                <a href="@Url.Action("HistorialCompras", "Inicio")">
+                    <i class="zmdi zmdi-tab"></i>
+                </a>
+                <a href="@Url.Action("Logout", "Inicio")">
+                    <i class="zmdi zmdi-time-restore"></i>
+                </a>
+            </div>
+
+            <div class="navigation__header">
+                <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+            </div>
+            <div class="navigation__menu c-overflow">
+                <ul>
+                    <li>
+                        <a href="@Url.Action("Index", "Inicio")"><i class="zmdi zmdi-home"></i> Inicio</a>
+                    </li>
+                    <li><a href="@Url.Action("HistorialCompras", "Inicio")"><i class="zmdi zmdi-tab"></i> Historial de compras</a></li>
+                    <li><a href="@Url.Action("Logout", "Inicio")"><i class="zmdi zmdi-time-restore"></i> Cerrar Sesion</a>  </li>
+                </ul>
+            </div>
+        </aside>
+
+
+        @{var numfactura = 0;}
+        @foreach (var item in Model)
+        {
+
+            if (item.NUMFACTURA != numfactura)
+            {
+                numfactura = item.NUMFACTURA;
+
+                <section id="content">
+                    <div class="container">
+                        <div class="content__header">
+                            <h2>Factura <small></small></h2>
+                        </div>
+
+                        <div class="invoice">
+                            <div class="invoice__header">
+                                <h2 style="color:#000; font:36px 'Freestyle Script';">
+                                    Gaming PC
+                                </h2>
+                            </div>
+
+
+                            <div class="row invoice__address">
+
+
+
+                                <div class="invoice__attrs__item">
+                                    <small>Fecha</small>
+                                    <h3>@Html.DisplayFor(model => item.FECHA)</h3>
+                                </div>
+
+
+                            </div>
+
+                            <div class="row invoice__attrs">
+                                <div class="col-xs-3">
+                                    <div class="invoice__attrs__item">
+                                        <small>Factura#</small>
+                                        <h2>@Html.DisplayFor(model => item.NUMFACTURA)</h2>
+                                    </div>
+                                </div>
+
+
+                                <div class="col-xs-3">
+                                    <div class="invoice__attrs__item">
+                                        <small>ID Cliente</small>
+                                        <h2>@Html.DisplayFor(model => item.IDCLIENTE)</h2>
+                                    </div>
+                                </div>
+
+                                <div class="col-xs-3">
+                                    <div class="invoice__attrs__item">
+                                        <small>Total</small>
+                                        <h2>$@Html.DisplayFor(model => item.PRECIOTOTAL)</h2>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <table class="table table-bordered invoice__table">
+                                <thead>
+                                    <tr class="text-uppercase">
+                                        <th>PRODUCTO</th>
+                                        <th>PRECIO UNITARIO</th>
+                                        <th>CANTIDAD</th>
+                                        <th>TOTAL</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var itemP in Model)
+                                    {
+                                        if (item.NUMFACTURA == itemP.NUMFACTURA)
+                                        {
+
+                                            <tr>
+                                                <td>
+                                                    <h5>@itemP.PRODUCTO</h5>
+                                                </td>
+                                                <td>$@itemP.PRECIOPARCIAL</td>
+                                                <td>@itemP.CANTIDADPRODUCTO</td>
+                                                <td>$@(itemP.CANTIDADPRODUCTO * itemP.PRECIOPARCIAL)</td>
+                                            </tr>
+                                        }
+                                    }
+
+
+                                    <tr>
+                                        <td colspan="3"></td>
+                                        <td>$@Html.DisplayFor(model => item.PRECIOTOTAL)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="invoice__remarks">
+
+                                <h4 class="m-t-30">GRACIAS POR SU COMPRA</h4>
+                                <p>Lo esperamos pronto de vuelta</p>
+                            </div>
+
+
+                            <footer class="invoice__footer">
+                                <a href="">@Html.DisplayFor(model => item.CORREOEMPRESA)</a>
+                                <a href="">@Html.DisplayFor(model => item.TELEFONOEMPRESA)</a>
+                                <a href="">@Html.DisplayFor(model => item.NOMBREEMPRESA)</a>
+                            </footer>
+                        </div>
+
+                    </div>
+
+                    <button class="btn btn--float btn--fixed hidden-xs hidden-sm" data-mae-action="print"><i class="zmdi zmdi-print"></i></button>
+                </section>
+            }
+        }
+
+        <footer id="footer"></footer>
+
+    </section>
+
+
+
+
+    <!-- Javascript Libraries -->
+    <!-- jQuery -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/jquery/dist/jquery.min.js")"></script>
+
+    <!-- Bootstrap -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js")"></script>
+
+    <!-- Malihu ScrollBar -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js")"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js")"></script>
+
+    <!-- Demo Only -->
+    <script src="@Url.Content("~/content/Admin/demo/js/misc.js")"></script>
+
+    <!-- Site Functions & Actions -->
+    <script src="@Url.Content("~/content/Admin/js/app.min.js")"></script>
+</body>
+</html>

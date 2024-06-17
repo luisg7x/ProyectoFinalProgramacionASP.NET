@@ -1,0 +1,77 @@
+﻿@model ProyectoP5.Models.ClienteCRUDModel
+@{
+    ViewBag.Title = "Register";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/formulario.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/jquery.loadingModal.css")">
+    <title>Registro</title>
+</head>
+
+
+<div class="titule">
+    <p style="font-family: arial; font-size: 26px;">Registro</p>
+</div>
+
+<div class="contenedor-formulario">
+    <div class="wrap">
+@using (Html.BeginForm("Register", null, FormMethod.Post, new { @class = "formulario", name = "formulario_registro"}))
+{
+   
+            <div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.IdCliente, new { required = "required", type = "text", data_mask = "0-0000-0000", maxlength = "19" })
+                    <label class="label">ID Cliente</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.NombreCliente, new { required = "required" })
+                    <label class="label">Nombre</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.ApellidoCliente, new { required = "required" })
+                    <label class="label">Apellidos</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.NumTarjeta, new { required = "required", type = "text", data_mask = "0000-0000-0000", maxlength = "19" })
+                    <label class="label">Número de Tarjeta</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.Correo, new { required = "required", type = "email" })
+                    <label class="label">Correo</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.Usuario, new { required = "required" })
+                    <label class="label">Usuario</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.Password, new { required = "required", type = "password",id="pass", name="pass"})
+                    <label class="label">Contraseña:</label>
+                </div>
+                <div class="input-group">
+                    @Html.TextBoxFor(model => model.Password, new { required = "required", type = "password", id = "pass2", name = "pass2" })
+                    <label class="label">Repetir Contraseña:</label>
+                </div>
+                <div class="input-group radio">
+                    @Html.RadioButtonFor(model => model.Sexo, "Hombre", new { id = "hombre", name="sexo", type="radio" })
+                    <label for="hombre">Hombre</label>
+                    @Html.RadioButtonFor(model => model.Sexo, "Mujer", new { id = "mujer", name = "sexo", type = "radio" })
+                    <label for="mujer">Mujer</label>
+                </div>
+                <div class="input-group checkbox">
+                    <input type="checkbox" name="terminos" id="terminos" value="true">
+                    <label for="terminos">Acepto los Terminos y Condiciones</label>
+                </div>
+                <p style="font-size: 16px; color: red; text-align: center; margin-bottom: 10px;">@ViewData["error"]</p>
+                <input type="submit" id="btn-submit" value="Registrar">
+            </div>
+}
+    </div>
+    @section Scripts{
+    <script src="@Url.Content("~/Content/js/formulario.js")"></script>
+    <!-- jQuery Mask -->
+    <!-- Jquery Core Js -->
+    <script src="@Url.Content("~/content/Admin/tables/plugins/jquery/jquery.min.js")"></script>
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/jquery-mask-plugin/dist/jquery.mask.min.js")"></script>
+        }
+
+</div>

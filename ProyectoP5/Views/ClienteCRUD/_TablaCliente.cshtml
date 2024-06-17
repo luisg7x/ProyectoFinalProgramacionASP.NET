@@ -1,0 +1,52 @@
+﻿@model IEnumerable<ProyectoP5.Models.ClienteCRUDModel>
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+    <thead>
+        <tr>
+            <th data-column-id="1" data-type="numeric">@Html.DisplayNameFor(model => model.IdCliente)</th>
+            <th data-column-id="2">@Html.DisplayNameFor(model => model.NombreCliente)</th>
+            <th data-column-id="3" data-order="desc">@Html.DisplayNameFor(model => model.ApellidoCliente)</th>
+            <th data-column-id="4" data-order="desc">@Html.DisplayNameFor(model => model.Sexo)</th>
+            <th data-column-id="5" data-order="desc">@Html.DisplayNameFor(model => model.NumTarjeta)</th>
+            <th data-column-id="6" data-order="desc">@Html.DisplayNameFor(model => model.Correo)</th>
+            <th data-column-id="7" data-order="desc">@Html.DisplayNameFor(model => model.Usuario)</th>
+            <th data-column-id="8" data-order="desc">@Html.DisplayNameFor(model => model.Password)</th>
+            <th data-column-id="9" data-sortable="false">Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NombreCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApellidoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sexo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NumTarjeta)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Correo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Usuario)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Password)
+        </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarCliente", new { id = item.IdCliente }) |
+                    @Html.ActionLink("Eliminar", "ClienteCRUDDelete", new { id = item.IdCliente })
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>

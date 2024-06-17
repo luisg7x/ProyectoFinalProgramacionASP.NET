@@ -1,0 +1,7 @@
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\b\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll.config
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\b\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\b\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.pdb
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\i\ProyectoP5.Tests\Debug\ProyectoP5.Tests.csprojResolveAssemblyReference.cache
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\i\ProyectoP5.Tests\Debug\ProyectoP5.Tests.csproj.CoreCompileInputs.cache
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\i\ProyectoP5.Tests\Debug\ProyectoP5.Tests.dll
+E:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\.vs\ProyectoP5\lut\0\i\ProyectoP5.Tests\Debug\ProyectoP5.Tests.pdb

@@ -1,0 +1,38 @@
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\UnitTest.dll.config
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\EntityFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\UnitTest\obj\Debug\UnitTest.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\UnitTest.dll.config
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\UnitTest.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\UnitTest.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\EntityFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\obj\Debug\UnitTest.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\UnitTest\obj\Debug\UnitTest.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\UnitTest.dll.config
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\UnitTest.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\UnitTest.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\BLL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\DAL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\BLL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\bin\Debug\DAL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\obj\Debug\UnitTest.csprojResolveAssemblyReference.cache
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\obj\Debug\UnitTest.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\UnitTest\obj\Debug\UnitTest.pdb

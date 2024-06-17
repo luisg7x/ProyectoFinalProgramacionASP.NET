@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ProyectoP5.Models.TipoProductoCRUDModel>
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+    <thead>
+        <tr>
+            <th data-column-id="1" data-type="numeric">@Html.DisplayNameFor(model => model.IdTipoProducto)</th>
+            <th data-column-id="2">@Html.DisplayNameFor(model => model.NombreProducto)</th>
+            <th data-column-id="3" data-sortable="false">Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdTipoProducto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreProducto)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarTipoProducto", new { id = item.IdTipoProducto }) |
+                    @Html.ActionLink("Eliminar", "TipoProductoCRUDDelete", new { id = item.IdTipoProducto })                
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

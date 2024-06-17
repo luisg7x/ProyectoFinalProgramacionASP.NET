@@ -1,0 +1,116 @@
+/* form starting stylings ------------------------------- */
+.group            { 
+  position:relative; 
+  margin-bottom:15px; 
+}
+input               {
+  
+        font-family: "Roboto";
+        font-size: 16px;
+        color: #2e2d2b;
+        width: 100%;
+        outline: none;
+        padding: 15px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #2e2d2b; 
+}
+input:focus         { outline:none; }
+
+
+textArea              {
+        font-family: "Roboto";
+        font-size: 16px;
+        color: #2e2d2b;
+        width: 100%;
+        outline: none;
+        padding: 15px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #2e2d2b; 
+        resize:none;
+}
+textArea:focus         { outline:none; }
+
+/* LABEL ======================================= */
+label                {
+  color:#2e2d2b; 
+  font-size:16px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top:10px;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+
+/* active state */
+
+input:focus ~ label, input:valid ~ label {
+  top:-20px;
+  font-size:13px;
+  color:#2e2d2b;
+}
+
+textArea:focus ~ label, textArea:valid ~ label {
+  top:-20px;
+  font-size:13px;
+  color:#2e2d2b;
+}
+
+input[type="text"]:focus, input[type="text"]:active,textArea:active,textArea:focus
+ {
+          outline: none;
+          border-bottom: 3px solid #303F9F; }
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+  position:absolute;
+  height:60%; 
+  width:100px; 
+  top:25%; 
+  left:0;
+  pointer-events:none;
+  opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+textArea:focus ~ .highlight {
+  -webkit-animation:inputHighlighter 0.3s ease;
+  -moz-animation:inputHighlighter 0.3s ease;
+  animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#757575; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#757575; }
+  to    { width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#757575; }
+  to    { width:0; background:transparent; }
+}
+@-webkit-keyframes textAreaHighlighter {
+    from { background:#757575; }
+  to    { width:0; background:transparent; }
+}
+@-moz-keyframes textAreaHighlighter {
+    from { background:#757575; }
+  to    { width:0; background:transparent; }
+}
+@keyframes textAreaHighlighter {
+    from { background:#757575; }
+  to    { width:0; background:transparent; }
+}

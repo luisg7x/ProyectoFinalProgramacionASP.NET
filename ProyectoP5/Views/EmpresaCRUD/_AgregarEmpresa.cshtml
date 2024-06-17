@@ -1,0 +1,52 @@
+﻿@model ProyectoP5.Models.EmpresaCRUDModel
+
+@using (Html.BeginForm("EmpresaCRUDAdd", null, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Agregar Empresa</h4>
+        </div>
+        <div class="modal-body">
+
+            <div class="card__body">
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.IdEmpresa, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.IdEmpresa), required = "required" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.NombreEmpresa, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.NombreEmpresa), required = "required" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.TelefonoEmpresa, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.TelefonoEmpresa), required = "required", type = "text", data_mask = "0000-00-00", maxlength = "19" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.CorreoEmpresa, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.CorreoEmpresa), required = "required", type = "email" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.DireccionEmpresa, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.DireccionEmpresa), required = "required", type = "text" })
+                    <i class="form-group__bar"></i>
+                </div>
+                <br>
+
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-default">Insertar</button>
+            <button type="button" class="btn btn-default" id="closeEmpresa">Cerrar</button>
+        </div>
+    </div>
+}

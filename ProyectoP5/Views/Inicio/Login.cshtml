@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/formulario.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/jquery.loadingModal.css")">
+</head>
+
+<div class="titule">
+    <p style="font-family: arial; font-size: 26px;">Inicio de Sesión</p>
+</div>
+
+<div class="contenedor-formulario">
+    <div class="wrap">
+@using (Html.BeginForm("Login", null, FormMethod.Post, new { @class = "formulario", name = "formulario_registro" }))
+{
+
+
+            <div>
+                <div class="input-group">
+                    <input type="text" name="usuario">
+                    <label class="label">Nombre de Usuario:</label>
+                </div>
+                <div class="input-group">
+                    <input type="password" name="contrasena">
+                    <label class="label">Contraseña:</label>
+                </div>
+                <p style="font-size: 16px; color: red; text-align: center; margin-bottom: 10px;">@ViewData["login"]</p>
+                <input type="submit" id="btn-submit" value="Entrar">
+                <p>&nbsp; </p>
+                <a href="@Url.Action("Register", "Inicio")" style="font-size: 14px; color: darkred; float: left;">No tienes una cuenta aún?</a>
+            </div>
+
+}
+    </div>
+
+    <script src="@Url.Content("~/Content/js/formulario.js")"></script>
+
+</div>
+

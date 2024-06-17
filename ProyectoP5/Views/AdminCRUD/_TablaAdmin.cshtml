@@ -1,0 +1,42 @@
+﻿@model IEnumerable<ProyectoP5.Models.AdminCRUDModel>
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+    <thead>
+        <tr>
+            <th data-column-id="1" data-type="numeric">@Html.DisplayNameFor(model => model.IdAdmin)</th>
+            <th data-column-id="2">@Html.DisplayNameFor(model => model.NombreAdmin)</th>
+            <th data-column-id="3" data-order="desc">@Html.DisplayNameFor(model => model.ApellidoAdmin)</th>
+            <th data-column-id="4" data-order="desc">@Html.DisplayNameFor(model => model.Usuario)</th>
+            <th data-column-id="5" data-order="desc">@Html.DisplayNameFor(model => model.Contraseña)</th>
+            <th data-column-id="6" data-sortable="false">Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdAdmin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NombreAdmin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ApellidoAdmin)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Usuario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contraseña)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarAdmin", new { id = item.IdAdmin }) |
+                    @Html.ActionLink("Eliminar", "AdminCRUDDelete", new { id = item.IdAdmin })     
+                  
+                </td>
+            </tr>
+    
+        }
+    </tbody>
+</table>

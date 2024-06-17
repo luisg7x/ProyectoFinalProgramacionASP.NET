@@ -1,0 +1,190 @@
+﻿@model IEnumerable<ProyectoP5.Models.HistorialComprasModel>
+
+@{
+    ViewBag.Title = "HistorialCompras";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <!-- Bootstrap Core Css -->
+    <link href="@Url.Content("~/content/Admin/tables/plugins/bootstrap/css/bootstrap4.min.css")" rel="stylesheet">
+</head>
+<style type="text/css">
+    * {
+        text-decoration: none;
+    }
+
+    .container {
+        max-width: 1000px;
+    }
+
+    .table > thead > tr.names > th {
+        border-bottom: 1px;
+    }
+
+    .table > tbody > tr.item > td {
+        padding-bottom: 20px;
+        padding-top: 20px;
+        vertical-align: middle;
+    }
+
+    .table > tfoot > tr.no-border > td {
+        border-top: 0 none;
+        padding-top: 20px;
+    }
+
+    .img-product {
+        padding-top: 20px;
+    }
+
+    .table {
+        display: table;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        border-bottom: 2px solid #dddddd;
+        color: #8d8d8d;
+        margin: auto;
+        text-align: center;
+    }
+
+    table {
+        background-color: transparent;
+    }
+
+    .buttonFormulario {
+        background: #303F9F;
+        border-radius: 4px;
+        border: 2px solid #f2f2f2;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        padding: 10px;
+        width: 100%;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+        .buttonFormulario:hover {
+            background: #1976D2;
+        }
+
+    .buttonEliminar {
+        background: #333;
+        border-radius: 4px;
+        border: 2px solid #f2f2f2;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+        .buttonEliminar:hover {
+            background: #1976D2;
+        }
+
+    .buttonCantidad {
+        background: #333;
+        border-radius: 4px;
+        border: 2px solid #f2f2f2;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        padding-right: 12px;
+        padding-left: 12px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+    }
+
+        .buttonCantidad:hover {
+            background: #1976D2;
+        }
+</style>
+
+<div class="titule">
+    <p style="font-family: arial; font-size: 26px;">Historial de Compras</p>
+</div>
+@{var numfactura = 0;}
+@foreach (var item in Model)
+{
+    
+    if (item.NUMFACTURA != numfactura) { 
+        numfactura = item.NUMFACTURA;
+        @Html.HiddenFor(model => item.NUMFACTURA)
+        <div class="tablasgrande">
+            <p style="font-family: arial; font-size: 21px;">Fecha: @item.FECHA</p>
+            <p style="font-family: arial; font-size: 18px;">Factura#: @item.NUMFACTURA</p>
+            <div class="container">
+                <table id="cart" class="table table-responsive">
+                    <thead>
+                        <tr class="names">
+                            <th style="width:55%">Producto</th>
+                            <th style="width:15%" class="text-right hidden-xs">Precio</th>
+                            <th style="width:15%" class="text-right">Cantidad</th>
+                            <th style="width:15%" class="text-right">SubTotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+     
+                           @foreach (var itemP in Model)
+                            {
+                                 if (item.NUMFACTURA == itemP.NUMFACTURA) 
+                                 { 
+
+                                        var base64 = Convert.ToBase64String(itemP.FOTO);
+                                        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+
+                                    <tr class="item">
+                                        <td data-th="Product">
+                                            <div class="row">
+                                                <div class="col-sm-3 hidden-xs"><img src='@imgSrc' alt="Converse" class="img-product img-responsive img-rounded" /></div>
+                                                <div class="col-sm-9">
+                                                    <h4 class="nomargin">@itemP.MODELO</h4>
+                                                    <p class="hidden-xs">@itemP.MARCA</p>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td data-th="Price" class="text-right hidden-xs">$@itemP.PRECIOPARCIAL</td>
+                                        <td data-th="Quantity" class="text-right">
+                                            <span class="qty">@itemP.CANTIDADPRODUCTO</span>
+                                        </td>
+                                        <td data-th="Subtotal" class="text-right">$@(itemP.CANTIDADPRODUCTO * itemP.PRECIOPARCIAL)</td>
+                                    </tr>
+                               
+                               }
+
+                        }
+ 
+    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td class="hidden-xs" colspan="2"></td>
+                        <td class="text-right" style="font-size: 16px;">Total</td>
+                        <td class="text-right" style="font-size: 24px; color:red;"><strong>$@item.PRECIOTOTAL</strong></td>
+                        <td></td>
+                    </tr>
+                    <tr class="no-border">
+                        <td colspan="2" class="hidden-xs"></td>
+                        <td></td>
+                        <td colspan="2">
+                            <a class="buttonFormulario" href='@Url.Action("FacturaHistorial", "Inicio", new { id = item.NUMFACTURA })'>Ver Factura</a>
+                        </td>
+
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+    </div>
+}
+}
+

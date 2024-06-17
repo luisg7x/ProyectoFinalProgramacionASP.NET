@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D7B7B6A0-D22A-4A5F-B871-FB3E155608AE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="AdminDALImpl.cs" />
+    <Compile Include="Cliente.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ClienteDALImpl.cs" />
+    <Compile Include="Cryptor.cs" />
+    <Compile Include="DetalleFactura.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DetalleFacturaDALImpl.cs" />
+    <Compile Include="Empresa.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EmpresaDALImpl.cs" />
+    <Compile Include="Encriptar.cs" />
+    <Compile Include="Factura.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="FacturaDALImpl.cs" />
+    <Compile Include="GenericRepository.cs" />
+    <Compile Include="IAdminDAL.cs" />
+    <Compile Include="IClienteDAL.cs" />
+    <Compile Include="IDetalleFacturaDAL.cs" />
+    <Compile Include="IEmpresaDAL.cs" />
+    <Compile Include="IFacturaDAL.cs" />
+    <Compile Include="IGenericRepository.cs" />
+    <Compile Include="IProductoDAL.cs" />
+    <Compile Include="ITipoProductoDAL.cs" />
+    <Compile Include="IUnitOfWork.cs" />
+    <Compile Include="Producto.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ProductoDALImpl.cs" />
+    <Compile Include="PrograVEntities.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrograVEntities.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrograVEntities.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="PrograVEntities.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrograVEntities.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TipoProducto.cs">
+      <DependentUpon>PrograVEntities.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TipoProductoDALImpl.cs" />
+    <Compile Include="UnitOfWork.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="PrograVEntities.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>PrograVEntities.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+    <None Include="PrograVEntities.edmx.diagram">
+      <DependentUpon>PrograVEntities.edmx</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PrograVEntities.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrograVEntities.edmx</DependentUpon>
+      <LastGenOutput>PrograVEntities.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="PrograVEntities.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>PrograVEntities.edmx</DependentUpon>
+      <LastGenOutput>PrograVEntities.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,139 @@
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll.config
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Owin.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll.config
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\ProyectoP5.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Helpers.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Mvc.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Razor.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Owin.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Optimization.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\EntityFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\ProyectoP5.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Helpers.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Mvc.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Razor.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\System.Web.Optimization.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll.config
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.Tests.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Newtonsoft.Json.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Helpers.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Mvc.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Razor.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Deployment.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Razor.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Optimization.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Owin.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\DAL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\BLL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\itextsharp.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\EntityFramework.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\ProyectoP5.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Newtonsoft.Json.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Helpers.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Mvc.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Razor.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Deployment.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.WebPages.Razor.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\System.Web.Optimization.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\DAL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\BLL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\itextsharp.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\EntityFramework.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\Microsoft.Owin.Security.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Helpers.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Mvc.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Razor.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.Deployment.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.WebPages.Razor.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\bin\Debug\es\System.Web.Optimization.resources.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.csprojResolveAssemblyReference.cache
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\ProyectoP5.Tests\obj\Debug\ProyectoP5.Tests.pdb

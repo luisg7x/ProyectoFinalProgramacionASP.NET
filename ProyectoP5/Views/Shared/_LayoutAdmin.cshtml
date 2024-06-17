@@ -1,0 +1,146 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="@Url.Content("~/Content/images/icono.ico")">
+    <title>Admin</title>
+
+    <!-- Bootstrap Core Css -->
+    <link href="@Url.Content("~/content/Admin/tables/plugins/bootstrap/css/bootstrap.css")" rel="stylesheet">
+  
+    <!-- JQuery DataTable Css -->
+    <link href="@Url.Content("~/content/Admin/tables/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css")" rel="stylesheet" >
+
+    <!-- Animate CSS -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/animate.css/animate.min.css")" rel="stylesheet">
+    <!-- Material Design Icons -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css")" rel="stylesheet">
+
+    <!-- Malihu Scrollbar -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css")" rel="stylesheet">
+
+    <!-- NoUiSlider -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/nouislider/distribute/nouislider.min.css")" rel="stylesheet">
+
+    <!-- Full Calendar -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/fullcalendar/dist/fullcalendar.min.css")" rel="stylesheet">
+
+    <!-- Farbtastic Color Picker-->
+    <link href="@Url.Content("~/content/Admin/vendors/farbtastic/farbtastic.css")" rel="stylesheet">
+
+    <!-- Moment -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/moment/min/moment.min.js")"></script>
+
+    <!-- Bootstrap Date/Time picker -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css")" rel="stylesheet">
+
+    <!-- Select 2 -->
+    <link href="@Url.Content("~/content/Admin/vendors/bower_components/select2/dist/css/select2.min.css")" rel="stylesheet">
+
+
+    <!-- Site CSS -->
+    <link href="@Url.Content("~/content/Admin/css/app-1.min.css")" rel="stylesheet">
+
+    <!-- Page loader -->
+    <script src="@Url.Content("~/content/Admin/js/page-loader.min.js")"></script>
+               
+ </head>
+
+<body>
+    <!-- Page Loader -->
+    <div id="page-loader">
+        <div class="preloader preloader--xl preloader--light">
+            <svg viewBox="25 25 50 50">
+                <circle cx="50" cy="50" r="20" />
+            </svg>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <div class="logo">
+            <h2 class="hidden-xs" style="font:38px 'Freestyle Script';">
+                Gaming PC
+            </h2>
+            <p class="hidden-xs">
+                <z style="font-size:16px;">Bienvenido @Session["usuario"].ToString()</z>
+                <br>
+                <br>
+                <small>Pagina de Administrador</small>
+            </p>
+            <i class="logo__trigger zmdi zmdi-menu" data-mae-action="block-open" data-mae-target="#navigation"></i>
+        </div>
+    </header>
+
+
+    <section id="main">
+
+        @RenderBody()
+
+
+
+
+
+    </section>
+
+ 
+
+    <!-- Javascript Libraries -->
+
+    <!-- Jquery Core Js -->
+    <script src="@Url.Content("~/content/Admin/tables/plugins/jquery/jquery.min.js")"></script>
+
+    <!-- Bootstrap -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/bootstrap/dist/js/bootstrap.min.js")"></script>
+
+    <!-- Malihu ScrollBar -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js")"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js")"></script>
+    <script type="text/javascript" src="@Url.Content("~/content/Admin/js/jquery.leanModal.min.js")"></script>
+
+    <!-- Waves Effect Plugin Js -->
+    <script src="@Url.Content("~/content/Admin/tables/plugins/node-waves/waves.js")"></script>
+    <!-- Jquery DataTable Plugin Js -->
+    <script src="@Url.Content("~/content/Admin/tables/plugins/jquery-datatable/jquery.dataTables.js")"></script>
+    <script src="@Url.Content("~/content/Admin/tables/plugins/jquery-datatable/skin/bootstrap/js/dataTables.bootstrap.js")"></script>
+    <!-- Custom Js -->
+    <script src="@Url.Content("~/content/Admin/tables/js/pages/tables/jquery-datatable.js")"></script>
+
+    <!-- Select 2 -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/select2/dist/js/select2.full.min.js")"></script>
+
+    <!-- Farbtastic Color Picker -->
+    <script src="@Url.Content("~/content/Admin/vendors/farbtastic/farbtastic.min.js")"></script>
+
+    <!-- Bootstrap Date/Time Picker -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js")"></script>
+
+    <!-- jQuery Mask -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/jquery-mask-plugin/dist/jquery.mask.min.js")"></script>
+
+    <!-- FullCalendar -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/moment/min/moment.min.js")"></script>
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/fullcalendar/dist/fullcalendar.min.js")"></script>
+
+    <!-- Demo Only -->
+    <script src="@Url.Content("~/content/Admin/demo/js/misc.js")"></script>
+    <script src="@Url.Content("~/content/Admin/demo/js/calendar.js")"></script>
+
+    <!-- Site Functions & Actions -->
+    <script src="@Url.Content("~/content/Admin/js/app.min.js")"></script>
+
+
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

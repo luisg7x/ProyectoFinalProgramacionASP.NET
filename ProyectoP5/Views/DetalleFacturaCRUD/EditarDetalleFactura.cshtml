@@ -1,0 +1,69 @@
+﻿@model ProyectoP5.Models.DetalleFacturaCRUDModel
+
+@{
+    ViewBag.Title = "EditarDetalleFactura";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@Html.Partial("~/Views/Shared/_LayoutEditarCRUD.cshtml")
+
+<section id="content">
+    <div class="container">
+        <div class="content__header">
+            <h2>Actualizar <small>Puede editar aqui!</small></h2>
+        </div>
+
+        <div class="invoice" style="background-color: #181f23">
+            @using (Html.BeginForm())
+            {
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" style=" color: #fbfbfb">Editar Detalle Factura</h4>
+                    </div>
+
+                    <div class="modal-body">
+
+                        <div class="card__body">
+
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.IDDETALLEFACTURA, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.IDDETALLEFACTURA), disabled = "disable" })
+                                @Html.HiddenFor(model => model.IDDETALLEFACTURA)
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.NUMFACTURA, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.NUMFACTURA)})
+                                <i class="form-group__bar"></i>
+                            </div>
+
+
+                            <div class="form-group form-group--select">
+                                @Html.DropDownListFor(e => e.IDPRODUCTO, Model.PRODUCTOLIST, new { @class = "form-control", required = "required" })
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.CANTIDADPRODUCTO, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.CANTIDADPRODUCTO), type = "number", required = "required" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.PRECIOPARCIAL, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.PRECIOPARCIAL), type = "number", required = "required" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <br>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default">Actualizar</button>
+                        <a type="button" class="btn btn-default" href="@Url.Action("AdminCRUD", "Admin")">Cerrar</a>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</section>

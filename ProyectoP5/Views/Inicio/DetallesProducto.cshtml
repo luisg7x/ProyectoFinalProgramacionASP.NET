@@ -1,0 +1,116 @@
+﻿@model ProyectoP5.Models.ProductoCRUDModel
+
+@{
+    ViewBag.Title = "DetallesProducto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    .imagenes {
+        background: rgba(255,255,255,1.00);
+        box-sizing: border-box;
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+        /*flex*/
+        flex: 1 1 42%;
+        margin: 1%;
+        max-width: 1000px;
+        min-width: 310px;
+        text-align: center;
+        padding: 20px;
+        max-height: 400px;
+    }
+
+
+
+    .producto {
+        background: rgba(255,255,255,1.00);
+        box-shadow: 0 1px 2px 0 rgba(0,0,0,0.22);
+        box-sizing: border-box;
+        flex: 1 1 50%;
+        margin: 1%;
+        min-width: 310px;
+        max-width: 1000px;
+        padding: 20px;
+        position: relative;
+    }
+
+        .producto ul li {
+            margin-left: 40px;
+        }
+
+
+
+    .button {
+        float: right;
+        background: #333;
+        border-radius: 4px;
+        text-decoration: none;
+        border: 2px solid #f2f2f2;
+        color: #fff;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        padding: 10px;
+        margin: 30px;
+        -webkit-transition: all 0.3s ease;
+        -o-transition: all 0.3s ease;
+        transition: all 0.3s ease;
+        /*flex*/
+        flex-grow: 1;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+
+    .button span {
+        margin-right: 10px;
+  
+    }
+
+        .button:hover {
+            background: #1976D2;
+        }
+
+    .precio {
+        margin: 40px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+    }
+
+    .descripcion {
+        margin: 10px;
+    }
+</style>
+
+
+<div class="titule">
+    <p style="font-family: arial; font-size: 26px;">@Html.DisplayFor(model => model.MarcaProducto)</p>
+</div>
+
+
+
+@{
+    var base64 = Convert.ToBase64String(Model.FotoProducto);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+}
+
+<div class="imagenes">
+    <img src='@imgSrc' style='height: 100%; width: 100%; object-fit: contain'>
+</div>
+<div class="producto">
+    <h3 style=" font-size: 18px; color: #303F9F;">@Html.DisplayFor(model => model.MarcaProducto) @Html.DisplayFor(model => model.ModeloProducto)</h3>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <ul class="descripcion">
+        <p>@Html.DisplayFor(model => model.DescripcionProducto)</p>
+    </ul>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+
+    <h3 class="precio">Precio:  <span style="color: rgba(166,0,0,1); font-size: 24px;">$@Html.DisplayFor(model => model.PrecioUnitario)</span></h3><a class="button" href='@Url.Action("addItemCarrito", "Inicio", new { id = Model.IdProducto }, null)'><span class='icon-shopping-cart'></span>Añadir al Carrito</a>
+
+
+    <p>&nbsp;</p>
+</div>

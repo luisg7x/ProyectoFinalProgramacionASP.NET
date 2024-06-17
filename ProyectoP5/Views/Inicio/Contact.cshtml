@@ -1,0 +1,105 @@
+﻿@model ProyectoP5.Models.EmpresaCRUDModel
+@{
+    ViewBag.Title = "Contact";
+}
+
+<head>
+    
+    
+    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <script src="@Url.Content("~/content/sweetalert-dev.js")"></script>
+    <link rel="stylesheet" href="@Url.Content("~/content/css/formu.css")">
+    <link rel="stylesheet" href="@Url.Content("~/content/jquery.loadingModal.css")"><!-- carga -->
+    <link rel="stylesheet" href="@Url.Content("~/content/resources/css/sweetalert.css")">
+    
+    
+    
+    <style type="text/css">
+        .buttonFormulario {
+            background: #303F9F;
+            border-radius: 1px;
+            border: 2px solid #f2f2f2;
+            color: #fff;
+            cursor: pointer;
+            display: inline-block;
+            font-family: "Roboto";
+            font-size: 16px;
+            padding: 15px;
+            width: 100%;
+            -webkit-transition: all 0.3s ease;
+            -o-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+        }
+
+            .buttonFormulario:hover {
+                background: #1976D2;
+            }
+    </style>
+
+</head>
+
+<div class="titule">
+    <p style="font-family: arial; font-size: 26px;">Contactenos</p>
+</div>
+<div class="Contacto">
+    <p style="font-family: arial; font-size: 26px; color: rgba(71,71,71,1);">Contacto</p>
+    <p>&nbsp;</p>
+    <hr>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2 style="font-size: 18px">Número de Telefono:</h2><p>@Html.DisplayFor(model => model.TelefonoEmpresa)</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2 style="font-size: 18px">e-mail:</h2><p><a href="mailto : gamingPC@gmail.com">@Html.DisplayFor(model => model.CorreoEmpresa)</a>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <h2 style="font-size: 18px">Ubicación:</h2><p>@Html.DisplayFor(model => model.DireccionEmpresa)</p>
+</div>
+<div class="Opinion">
+@using (Html.BeginForm("Contact", null, FormMethod.Post, new { @class = "formulario", name = "formulario_datos" }))
+{
+
+ 
+        <p style="font-family: arial; font-size: 26px; color: rgba(71,71,71,1);">Envienos su Opinión</p>
+        <p style="text-align: center">&nbsp; </p>
+        <hr>
+        <p style="text-align: center">&nbsp; </p>
+        <p style="text-align: center">&nbsp; </p>
+
+        <p>&nbsp;</p>
+
+        <div class="group">
+            <input name="asunto" id="asunto" type="text" required>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Asunto:</label>
+        </div>
+
+        <p>&nbsp; </p>
+        <div class="group">
+            <textarea name="mensaje" id="descrip" required></textarea>
+            <span class="highlight"></span>
+            <span class="bar"></span>
+            <label>Descripción:</label>
+        </div>
+
+
+        <p>&nbsp; </p>
+
+        <input type="submit" class="buttonFormulario" value="Enviar">
+        <p>&nbsp;</p>
+}
+</div>
+<div class="Ubicacion">
+    <p style="font-family: arial; font-size: 26px; color: rgba(71,71,71,1);">Ubicación</p>
+    <p style="text-align: center">&nbsp; </p>
+    <hr>
+    <p style="text-align: center">&nbsp; </p>
+    <p style="text-align: center">&nbsp; </p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d22227.28353690392!2d-84.12352780971413!3d9.99489502805872!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scr!4v1453058188844" height="320" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+
+       
+
+   
+

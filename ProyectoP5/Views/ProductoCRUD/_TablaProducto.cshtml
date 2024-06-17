@@ -1,0 +1,49 @@
+﻿@model IEnumerable<ProyectoP5.Models.ProductoCRUDModel>
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+    <thead>
+        <tr>
+            <th data-column-id="1" data-type="numeric">@Html.DisplayNameFor(model => model.IdProducto)</th>
+            <th data-column-id="2">@Html.DisplayNameFor(model => model.MarcaProducto)</th>
+            <th data-column-id="3">@Html.DisplayNameFor(model => model.ModeloProducto)</th>
+            <th data-column-id="4">@Html.DisplayNameFor(model => model.NTipoProducto)</th>
+            <th data-column-id="5">@Html.DisplayNameFor(model => model.DescripcionProducto)</th>
+            <th data-column-id="6">@Html.DisplayNameFor(model => model.PrecioUnitario)</th>
+            <th data-column-id="7">@Html.DisplayNameFor(model => model.Cantidad)</th>
+            <th data-column-id="8" data-sortable="false">Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IdProducto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MarcaProducto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModeloProducto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NTipoProducto)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DescripcionProducto)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.PrecioUnitario)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Cantidad)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarProducto", new { id = item.IdProducto }) |
+                    @Html.ActionLink("Eliminar", "ProductoCRUDDelete", new { id = item.IdProducto })
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>

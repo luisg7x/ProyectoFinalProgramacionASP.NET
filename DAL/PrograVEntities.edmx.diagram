@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b796640fd8f943899b6e066f3892fbfc" Name="Diagram1">
+        <EntityTypeShape EntityType="PrograVModel.Admin" Width="1.5" PointX="2.75" PointY="4.75" />
+        <EntityTypeShape EntityType="PrograVModel.Cliente" Width="1.5" PointX="0.75" PointY="4.875" />
+        <EntityTypeShape EntityType="PrograVModel.DetalleFactura" Width="1.5" PointX="5.25" PointY="1.125" />
+        <EntityTypeShape EntityType="PrograVModel.Empresa" Width="1.5" PointX="0.75" PointY="1.125" />
+        <EntityTypeShape EntityType="PrograVModel.Factura" Width="1.5" PointX="3" PointY="1" />
+        <EntityTypeShape EntityType="PrograVModel.Producto" Width="1.5" PointX="6.5" PointY="4.5" />
+        <EntityTypeShape EntityType="PrograVModel.TipoProducto" Width="1.5" PointX="9" PointY="4.5" />
+        <AssociationConnector Association="PrograVModel.FK__Facturas__IDCLIE__33D4B598" />
+        <AssociationConnector Association="PrograVModel.FK__DetalleFa__IDPRO__31EC6D26" />
+        <AssociationConnector Association="PrograVModel.FK__DetalleFa__NUMFA__32E0915F" />
+        <AssociationConnector Association="PrograVModel.FK__Facturas__IDEMPR__34C8D9D1" />
+        <AssociationConnector Association="PrograVModel.FK__Productos__IDTIP__35BCFE0A" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

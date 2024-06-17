@@ -1,0 +1,76 @@
+﻿@model ProyectoP5.Models.ClienteCRUDModel
+
+@using (Html.BeginForm("ClienteCRUDAdd", null, FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    <div class="modal-content">
+        <div class="modal-header">
+            <h4 class="modal-title">Agregar Cliente</h4>
+        </div>
+        <div class="modal-body">
+
+            <div class="card__body">
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.IdCliente, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.IdCliente), required = "required", type = "text", data_mask = "0-0000-0000", maxlength = "19" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.NombreCliente, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.NombreCliente), required = "required" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.ApellidoCliente, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.ApellidoCliente), required = "required" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.NumTarjeta, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.NumTarjeta), required = "required", type = "text",  data_mask = "0000-0000-0000", maxlength = "19" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Correo, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.Correo), required = "required", type="email" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Usuario, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.Usuario), required = "required" })
+                    <i class="form-group__bar"></i>
+                </div>
+
+
+                <div class="form-group">
+                    @Html.TextBoxFor(model => model.Password, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.Password), required = "required", type = "password"})
+                    <i class="form-group__bar"></i>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Sexo, "Hombre")
+                        <i class="input-helper"></i>
+                        Hombre
+                    </label>
+                </div>
+
+                <div class="clearfix"></div>
+
+                <div class="radio">
+                    <label>
+                        @Html.RadioButtonFor(model => model.Sexo, "Mujer")
+                        <i class="input-helper"></i>
+                        Mujer
+                    </label>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn btn-default">Insertar</button>
+            <button type="button" class="btn btn-default"  id="closeCliente">Cerrar</button>
+        </div>
+    </div>
+}

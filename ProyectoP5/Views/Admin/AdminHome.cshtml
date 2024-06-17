@@ -1,0 +1,163 @@
+﻿
+@{
+    ViewBag.Title = "AdminHome";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<aside id="navigation">
+    <div class="navigation__header">
+        <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+    </div>
+    <div class="navigation__toggles">
+        <a href="@Url.Action("AdminHome", "Admin")">
+            <i class="zmdi zmdi-home"></i>
+        </a>
+        <a href="@Url.Action("AdminCalendar", "Admin")">
+            <i class="zmdi zmdi-calendar"></i>
+        </a>
+        <a href="@Url.Action("AdminCRUD", "Admin")">
+            <i class="zmdi zmdi-view-list"></i>
+        </a>
+    </div>
+
+    <div class="navigation__header">
+        <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+    </div>
+    <div class="navigation__menu c-overflow">
+        <ul>
+            <li class="navigation__active">
+                <a href="@Url.Action("AdminHome", "Admin")"><i class="zmdi zmdi-home"></i> Inicio</a>
+            </li>
+            <li><a href="@Url.Action("AdminCalendar", "Admin")"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
+            <li><a href="@Url.Action("AdminCRUD", "Admin")"><i class="zmdi zmdi-view-list"></i> Tablas</a>  </li>
+            <li><a href="@Url.Action("Logout", "Inicio")"><i class="zmdi zmdi-time-restore"></i> Cerrar Sesion</a>  </li>
+
+        </ul>
+    </div>
+</aside>
+
+
+<section id="content">
+    <div class="content__header">
+        <h2>Flot Charts <small>Flot is a pure JavaScript plotting library for jQuery, with a focus on simple usage, attractive looks and interactive features.</small></h2>
+
+        <div class="actions">
+            <a href=""><i class="zmdi zmdi-check-all"></i></a>
+            <a href=""><i class="zmdi zmdi-trending-up"></i></a>
+            <div class="dropdown">
+                <a href="" data-toggle="dropdown"><i class="zmdi zmdi-more-vert"></i></a>
+                <ul class="dropdown-menu pull-right">
+                    <li><a href="">Change Date Range</a></li>
+                    <li><a href="">Change Graph Type</a></li>
+                    <li><a href="">Other Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Lines Chart</h2>
+                </div>
+
+                <div class="card__body">
+                    <div id="chart-line" class="flot-chart"></div>
+                    <div class="flot-chart-legend flot-chart-legend--line"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Bar Chart</h2>
+                </div>
+
+                <div class="card__body">
+                    <div id="chart-bar" class="flot-chart"></div>
+                    <div class="flot-chart-legend flot-chart-legend--bar"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Line chart with curved edges <small>Curved edges made possible using curvedLines Flot plugin.</small></h2>
+                </div>
+
+                <div class="flot-chart-edge">
+                    <div id="chart-curved-line" class="flot-chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Dynamic Chart</h2>
+                </div>
+
+                <div class="card__body">
+                    <div id="chart-dynamic" class="flot-chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Pie Chart</h2>
+                </div>
+
+                <div class="card__body">
+                    <div id="chart-pie" class="flot-chart flot-chart--lg"></div>
+                    <div class="flot-chart-legend flot-chart-legend--pie"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card__header">
+                    <h2>Donut Chart</h2>
+                </div>
+
+                <div class="card__body">
+                    <div id="chart-donut" class="flot-chart flot-chart--lg"></div>
+                    <div class="flot-chart-legend flot-chart-legend--donut"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+@section Scripts{
+    <!-- Main Flot library -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/flot/jquery.flot.js")"></script>
+
+    <!-- Responsive charts -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/flot/jquery.flot.resize.js")"></script>
+
+    <!-- tooltips -->
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/flot.tooltip/js/jquery.flot.tooltip.min.js")"></script>
+
+    <!-- Flot Charts -->
+
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/flot/jquery.flot.pie.js")"></script>
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/flot-orderBars/js/jquery.flot.orderBars.js")"></script>
+    <script src="@Url.Content("~/content/Admin/vendors/bower_components/flot.curvedlines/curvedLines.js")"></script>
+
+    <!-- Demo Only -->
+    <script src="@Url.Content("~/content/Admin/demo/js/flot-charts/curved-line.js")"></script>
+    <script src="@Url.Content("~/content/Admin/demo/js/flot-charts/line.js")"></script>
+    <script src="@Url.Content("~/content/Admin/demo/js/flot-charts/bar.js")"></script>
+    <script src="@Url.Content("~/content/Admin/demo/js/flot-charts/dynamic.js")"></script>
+    <script src="@Url.Content("~/content/Admin/demo/js/flot-charts/pie.js")"></script>
+    <script src="@Url.Content("~/content/Admin/demo/js/misc.js")"></script>
+
+}
+

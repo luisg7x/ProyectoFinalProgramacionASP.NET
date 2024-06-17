@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PrograVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Admins">
+    <Key>
+      <PropertyRef Name="IDADMIN" />
+    </Key>
+    <Property Name="IDADMIN" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CONTRASEÑA" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Clientes">
+    <Key>
+      <PropertyRef Name="IDCLIENTE" />
+    </Key>
+    <Property Name="IDCLIENTE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="APELLIDOS" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="SEXO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NUMTARJETA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CORREO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="USUARIO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CONTRASEÑA" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DetalleFacturas">
+    <Key>
+      <PropertyRef Name="IDDETALLEFACTURA" />
+    </Key>
+    <Property Name="IDDETALLEFACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDPRODUCTO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NUMFACTURA" Type="int" Nullable="false" />
+    <Property Name="CANTIDADPRODUCTO" Type="int" Nullable="false" />
+    <Property Name="PRECIOPARCIAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Empresas">
+    <Key>
+      <PropertyRef Name="IDEMPRESA" />
+    </Key>
+    <Property Name="IDEMPRESA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NOMBRE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="TELEFONO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CORREO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="DIRECCION" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Facturas">
+    <Key>
+      <PropertyRef Name="NUMFACTURA" />
+    </Key>
+    <Property Name="NUMFACTURA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDEMPRESA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PRECIOTOTAL" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="IDCLIENTE" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="FECHA" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Productos">
+    <Key>
+      <PropertyRef Name="IDPRODUCTO" />
+    </Key>
+    <Property Name="IDPRODUCTO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MARCA" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="MODELO" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="IDTIPOPRODUCTO" Type="int" Nullable="false" />
+    <Property Name="FOTO" Type="image" />
+    <Property Name="PRECIOUNITARIO" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="CANTIDADDISPONIBLE" Type="int" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TipoProductos">
+    <Key>
+      <PropertyRef Name="IDTIPOPRODUCTO" />
+    </Key>
+    <Property Name="IDTIPOPRODUCTO" Type="int" Nullable="false" />
+    <Property Name="NOMBRETIPOPRODUCTO" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__DetalleFa__IDPRO__31EC6D26">
+    <End Role="Productos" Type="Self.Productos" Multiplicity="1" />
+    <End Role="DetalleFacturas" Type="Self.DetalleFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Productos">
+        <PropertyRef Name="IDPRODUCTO" />
+      </Principal>
+      <Dependent Role="DetalleFacturas">
+        <PropertyRef Name="IDPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__DetalleFa__NUMFA__32E0915F">
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="1" />
+    <End Role="DetalleFacturas" Type="Self.DetalleFacturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Facturas">
+        <PropertyRef Name="NUMFACTURA" />
+      </Principal>
+      <Dependent Role="DetalleFacturas">
+        <PropertyRef Name="NUMFACTURA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Facturas__IDCLIE__33D4B598">
+    <End Role="Clientes" Type="Self.Clientes" Multiplicity="1" />
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clientes">
+        <PropertyRef Name="IDCLIENTE" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="IDCLIENTE" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Facturas__IDEMPR__34C8D9D1">
+    <End Role="Empresas" Type="Self.Empresas" Multiplicity="1" />
+    <End Role="Facturas" Type="Self.Facturas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresas">
+        <PropertyRef Name="IDEMPRESA" />
+      </Principal>
+      <Dependent Role="Facturas">
+        <PropertyRef Name="IDEMPRESA" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Productos__IDTIP__35BCFE0A">
+    <End Role="TipoProductos" Type="Self.TipoProductos" Multiplicity="1" />
+    <End Role="Productos" Type="Self.Productos" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoProductos">
+        <PropertyRef Name="IDTIPOPRODUCTO" />
+      </Principal>
+      <Dependent Role="Productos">
+        <PropertyRef Name="IDTIPOPRODUCTO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="PrograVModelStoreContainer">
+    <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clientes" EntityType="Self.Clientes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DetalleFacturas" EntityType="Self.DetalleFacturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresas" EntityType="Self.Empresas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Facturas" EntityType="Self.Facturas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Productos" EntityType="Self.Productos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoProductos" EntityType="Self.TipoProductos" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__DetalleFa__IDPRO__31EC6D26" Association="Self.FK__DetalleFa__IDPRO__31EC6D26">
+      <End Role="Productos" EntitySet="Productos" />
+      <End Role="DetalleFacturas" EntitySet="DetalleFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__DetalleFa__NUMFA__32E0915F" Association="Self.FK__DetalleFa__NUMFA__32E0915F">
+      <End Role="Facturas" EntitySet="Facturas" />
+      <End Role="DetalleFacturas" EntitySet="DetalleFacturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Facturas__IDCLIE__33D4B598" Association="Self.FK__Facturas__IDCLIE__33D4B598">
+      <End Role="Clientes" EntitySet="Clientes" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Facturas__IDEMPR__34C8D9D1" Association="Self.FK__Facturas__IDEMPR__34C8D9D1">
+      <End Role="Empresas" EntitySet="Empresas" />
+      <End Role="Facturas" EntitySet="Facturas" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Productos__IDTIP__35BCFE0A" Association="Self.FK__Productos__IDTIP__35BCFE0A">
+      <End Role="TipoProductos" EntitySet="TipoProductos" />
+      <End Role="Productos" EntitySet="Productos" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

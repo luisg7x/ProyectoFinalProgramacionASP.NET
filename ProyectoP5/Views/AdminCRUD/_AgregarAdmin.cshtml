@@ -1,0 +1,49 @@
+﻿@model ProyectoP5.Models.AdminCRUDModel
+            @using (Html.BeginForm("AdminCRUDAdd", null, FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Agregar Administrador</h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="card__body">
+        
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.IdAdmin, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.IdAdmin), required = "required", type = "text", data_mask = "0-0000-0000", maxlength = "19" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.NombreAdmin, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.NombreAdmin), required = "required" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.ApellidoAdmin, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.ApellidoAdmin), required = "required" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Usuario, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.Usuario), required = "required" })
+                                <i class="form-group__bar"></i>
+                            </div>
+
+
+                            <div class="form-group">
+                                @Html.TextBoxFor(model => model.Contraseña, new { @class = "form-control", placeholder = Html.DisplayNameFor(model => model.Contraseña), required = "required", type = "password", value="" })
+                                <i class="form-group__bar"></i>
+                            </div>
+                            <br>
+
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-default">Insertar</button>
+                        <button type="button" class="btn btn-default"  id="closeAdmin">Cerrar</button>
+                    </div>
+                </div>
+            }
+

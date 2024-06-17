@@ -1,0 +1,82 @@
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\BLL.dll.config
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\obj\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5\BLL\obj\Debug\BLL.pdb
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\BLL.dll.config
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\BLL.dll
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\BLL.pdb
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\DAL.dll
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\EntityFramework.dll
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\DAL.pdb
+C:\Users\luisg\Desktop\ProyectoP5\BLL\bin\Debug\EntityFramework.xml
+C:\Users\luisg\Desktop\ProyectoP5\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\luisg\Desktop\ProyectoP5\BLL\obj\Debug\BLL.dll
+C:\Users\luisg\Desktop\ProyectoP5\BLL\obj\Debug\BLL.pdb
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\BLL.dll.config
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Familia\Desktop\ProyectoP5\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\ProyectoP5\BLL\obj\Debug\BLL.dll
+C:\Users\Familia\Desktop\ProyectoP5\BLL\obj\Debug\BLL.pdb
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\BLL.dll.config
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\BLL.dll
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\BLL.pdb
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\DAL.dll
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\DAL.pdb
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\obj\Debug\BLL.dll
+C:\Users\Lab\Desktop\ProyectoP5ConGeneric\BLL\obj\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\BLL.dll.config
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\BLL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\DAL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\DAL.pdb
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\obj\Debug\BLL.dll
+C:\Users\Familia\Desktop\Versiones ProyectoP5\ProyectoP5ConGeneric\BLL\obj\Debug\BLL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\BLL.dll.config
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\BLL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\BLL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\DAL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\DAL.pdb
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.xml
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\obj\Debug\BLL.dll
+F:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\obj\Debug\BLL.pdb
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\BLL.dll.config
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\BLL.dll
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\BLL.pdb
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\DAL.dll
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.dll
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\DAL.pdb
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\DAL.dll.config
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.xml
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\obj\Debug\BLL.dll
+D:\Progra V\P5 PRO\Versión FINAL\ProyectoP5\BLL\obj\Debug\BLL.pdb

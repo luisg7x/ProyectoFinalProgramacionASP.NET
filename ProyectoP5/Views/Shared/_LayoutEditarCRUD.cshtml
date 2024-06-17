@@ -1,0 +1,30 @@
+﻿<aside id="navigation">
+    <div class="navigation__header">
+        <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+    </div>
+    <div class="navigation__toggles">
+        <a href="@Url.Action("AdminHome", "Admin")">
+            <i class="zmdi zmdi-home"></i>
+        </a>
+        <a href="@Url.Action("AdminCalendar", "Admin")">
+            <i class="zmdi zmdi-calendar"></i>
+        </a>
+        <a href="@Url.Action("AdminCRUD", "Admin")">
+            <i class="zmdi zmdi-view-list"></i>
+        </a>
+    </div>
+
+    <div class="navigation__header">
+        <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+    </div>
+    <div class="navigation__menu c-overflow">
+        <ul>
+            <li>
+                <a href="@Url.Action("AdminHome", "Admin")"><i class="zmdi zmdi-home"></i> Inicio</a>
+            </li>
+            <li><a href="@Url.Action("AdminCalendar", "Admin")"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
+            <li class="navigation__active"><a href="@Url.Action("AdminCRUD", "Admin")"><i class="zmdi zmdi-view-list"></i> Tablas</a>  </li>
+            <li><a href="@Url.Action("Logout", "Inicio")"><i class="zmdi zmdi-time-restore"></i> Cerrar Sesion</a>  </li>
+        </ul>
+    </div>
+</aside>

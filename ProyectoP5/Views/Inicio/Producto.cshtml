@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ProyectoP5.Models.ProductoCRUDModel>
+
+@{
+    ViewBag.Title = "Producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style type="text/css">
+    .linkcomprar {
+        text-decoration: none;
+        color: rgba(0,0,0,1.00);
+    }
+</style>
+
+@{var titule = "Productos";}
+
+    @foreach (var item in Model)
+    {
+       titule = item.NTipoProducto;      
+    }
+    <div class="titule">
+        <p style="font-family: arial; font-size: 26px;">@titule</p>
+    </div>
+        
+  @foreach (var item in Model)
+{
+
+    <div class="productos">
+
+        @if (item.Cantidad <= 0)
+        {
+            <h2 style="font-size: 16px; font-family: arial;"><a class="linkcomprar">@Html.DisplayFor(modelItem => item.MarcaProducto) @Html.DisplayFor(modelItem => item.ModeloProducto)</a></h2>
+            <p style="font-size: 14px; font-family: arial; color:red;">No hay Stock</p>
+        }
+        else if (item.Cantidad <= 25)
+        {
+            <h2 style="font-size: 16px; font-family: arial;"><a href='@Url.Action("DetallesProducto", "Inicio", new { id = item.IdProducto })' class="linkcomprar">@Html.DisplayFor(modelItem => item.MarcaProducto) @Html.DisplayFor(modelItem => item.ModeloProducto)</a></h2>
+            <p style="font-size: 14px; font-family: arial; color: red;">Pocos disponibles</p>
+        }
+        else
+        {
+            <h2 style="font-size: 16px; font-family: arial;"><a href='@Url.Action("DetallesProducto", "Inicio", new { id = item.IdProducto })' class="linkcomprar">@Html.DisplayFor(modelItem => item.MarcaProducto) @Html.DisplayFor(modelItem => item.ModeloProducto)</a></h2>
+            <p style="font-size: 12px; font-family: arial;">&nbsp;</p>
+        }
+        @{
+        var base64 = Convert.ToBase64String(item.FotoProducto);
+        var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+        }
+        <img src='@imgSrc' />
+        <p style="font-size: 12px; font-family: arial;">&nbsp;</p>
+        <h2 style="font-size: 16px; font-family: arial;">$@Html.DisplayFor(modelItem => item.PrecioUnitario)</h2>
+    </div>
+}
+
+
+
+
+

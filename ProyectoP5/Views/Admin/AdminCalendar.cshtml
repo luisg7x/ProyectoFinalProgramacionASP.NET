@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "AdminCalendar";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<head>
+    <!-- Demo only -->
+    <link href="@Url.Content("~/content/Admin/demo/css/demo.css")" rel="stylesheet">
+    <title>Calendar</title>
+</head>
+
+<aside id="navigation">
+    <div class="navigation__header">
+        <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+    </div>
+    <div class="navigation__toggles">
+        <a href="@Url.Action("AdminHome", "Admin")">
+            <i class="zmdi zmdi-home"></i>
+        </a>
+        <a href="@Url.Action("AdminCalendar", "Admin")">
+            <i class="zmdi zmdi-calendar"></i>
+        </a>
+        <a href="@Url.Action("AdminCRUD", "Admin")">
+            <i class="zmdi zmdi-view-list"></i>
+        </a>
+    </div>
+    <div class="navigation__header">
+        <i class="zmdi zmdi-long-arrow-left" data-mae-action="block-close"></i>
+    </div>
+    <div class="navigation__menu c-overflow">
+        <ul>
+            <li>
+                <a href="@Url.Action("AdminHome", "Admin")"><i class="zmdi zmdi-home"></i> Inicio</a>
+            </li>
+            <li class="navigation__active"><a href="@Url.Action("AdminCalendar", "Admin")"><i class="zmdi zmdi-calendar"></i> Calendario</a></li>
+            <li><a href="@Url.Action("AdminCRUD", "Admin")"><i class="zmdi zmdi-view-list"></i> Tablas</a>  </li>
+            <li><a href="@Url.Action("Logout", "Inicio")"><i class="zmdi zmdi-time-restore"></i> Cerrar Sesion</a>  </li>
+        </ul>
+    </div>
+</aside>
+
+    <section id="content" class="content--boxed">
+        <div class="content__header content__header--calendar">
+            <h2>Calendario</h2>
+            <div class="actions actions--calendar">
+                <a href="" class="actions__calender-prev"><i class="zmdi zmdi-long-arrow-left"></i></a>
+                <a href="" class="actions__calender-next"><i class="zmdi zmdi-long-arrow-right"></i></a>
+                <a href="" data-calendar-view="month"><i class="zmdi zmdi-view-comfy active"></i></a>
+                <a href="" data-calendar-view="basicWeek"><i class="zmdi zmdi-view-week"></i></a>
+                <a href="" data-calendar-view="basicDay"><i class="zmdi zmdi-view-day"></i></a>
+            </div>
+        </div>
+        <div id="calendar" class="card"></div>
+    </section>
+
+

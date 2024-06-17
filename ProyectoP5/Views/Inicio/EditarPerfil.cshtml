@@ -1,0 +1,102 @@
+﻿@model ProyectoP5.Models.ClienteCRUDModel
+
+@{
+    ViewBag.Title = "EditarPerfil";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/formulario.css")">
+    <link rel="stylesheet" href="@Url.Content("~/Content/css/jquery.loadingModal.css")">
+    <title>Registro</title>
+</head>
+
+
+<div class="titule">
+    <p style="font-family: arial; font-size: 26px;">Perfil</p>
+</div>
+
+<div class="contenedor-formulario">
+    <div class="wrap">
+        @using (Html.BeginForm("EditarPerfil", null, FormMethod.Post, new { @class = "formulario", name = "formulario_registro" }))
+        {
+
+            <div>
+
+
+                <div class='input-group'>
+                <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.IdCliente)</label>
+                <br>               
+                    @Html.TextBoxFor(model => model.IdCliente, new {placeholder = Html.DisplayNameFor(model => model.IdCliente), disabled = "disable" })
+                    @Html.HiddenFor(model => model.IdCliente)     
+                </div>
+
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.NombreCliente)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.NombreCliente, new { required = "required" })
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.ApellidoCliente)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.ApellidoCliente, new { required = "required" })
+ 
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.NumTarjeta)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.NumTarjeta, new { required = "required", type = "text", data_mask = "0000-0000-0000", maxlength = "19" })
+        
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.Correo)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.Correo, new { required = "required", type = "email" })
+                 
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.Usuario)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.Usuario, new { required = "required" })
+                
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>@Html.DisplayNameFor(model => model.Password)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.Password, new { required = "required", type = "password", id = "pass", name = "pass" })
+                 
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>Confirmar @Html.DisplayNameFor(model => model.Password)</label>
+                    <br>
+                    @Html.TextBoxFor(model => model.Password, new { required = "required", type = "password", id = "pass2", name = "pass2" })
+              
+                </div>
+                <div class="input-group radio">
+                    @Html.RadioButtonFor(model => model.Sexo, "Hombre", new { id = "hombre", name = "sexo", type = "radio" })
+                    <label for="hombre">Hombre</label>
+                    @Html.RadioButtonFor(model => model.Sexo, "Mujer", new { id = "mujer", name = "sexo", type = "radio" })
+                    <label for="mujer">Mujer</label>
+                </div>
+                <div class="input-group checkbox">
+                    <input type="checkbox" name="terminos" id="terminos" value="true">
+                    <label for="terminos">Acepto los Terminos y Condiciones</label>
+                </div>
+                <div class="input-group">
+                    <label style=' font-weight: bold; color:#303F9F'>Historial de Compras:</label><p style=' font-size:16px; font-weight:normal; position:absolute; left:15px; padding:5px;'><a href='@Url.Action("HistorialCompras", "Inicio")'>Ver</a></p>
+                </div>
+                <hr>
+                <br>
+                <p style="font-size: 16px; color: red; text-align: center; margin-bottom: 10px;">@ViewData["error"]</p>
+                <input type="submit" id="btn-submit" value="Guardar">
+            </div>
+        }
+    </div>
+    @section Scripts{
+        <script src="@Url.Content("~/Content/js/formulario.js")"></script>
+        <!-- jQuery Mask -->
+        <!-- Jquery Core Js -->
+        <script src="@Url.Content("~/content/Admin/tables/plugins/jquery/jquery.min.js")"></script>
+        <script src="@Url.Content("~/content/Admin/vendors/bower_components/jquery-mask-plugin/dist/jquery.mask.min.js")"></script>
+    }
+
+</div>

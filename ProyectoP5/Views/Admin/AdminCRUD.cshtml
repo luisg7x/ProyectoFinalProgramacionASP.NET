@@ -1,0 +1,279 @@
+﻿@{ var table = 0; }
+@{
+    ViewBag.Title = "AdminCRUD";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+
+<head>
+    <style type="text/css">
+        #lean_overlay {
+            position: fixed;
+            z-index: 100;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background: #000;
+            display: none;
+        }
+
+        .popup {
+            position: absolute;
+            width: 600px;
+            display: none;
+            -webkit-border-radius: 5px;
+            max-height: calc(100vh - 210px);
+            overflow-y: auto;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+
+</head>
+
+@Html.Partial("~/Views/Shared/_LayoutEditarCRUD.cshtml")
+
+        <section id="content">
+
+            <div class="tab">
+                <ul class="tab-nav tab-nav--justified">
+                    <li class="active"><a href="#tab-home-2" data-toggle="tab">Admins</a></li>
+                    <li><a href="#tab-tipoproducto-2" data-toggle="tab">Tipo  Producto</a></li>
+                    <li><a href="#tab-producto-2" data-toggle="tab">Producto</a></li>
+                    <li><a href="#tab-cliente-2" data-toggle="tab">Clientes</a></li>
+                    <li><a href="#tab-empresa-2" data-toggle="tab">Empresas</a></li>
+                    <li><a href="#tab-factura-2" data-toggle="tab">Facturas</a></li>
+                    <li><a href="#tab-detalleFactura-2" data-toggle="tab">Detalle Factura</a></li>
+                </ul>
+
+                <div class="tab-content">
+                    <div class="tab-pane active" id="tab-home-2">
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Administrar Tablas<small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaAdmin","AdminCRUD"); }
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddAdmin" name="AddAdminCRUD" href="#AddAdminCRUD"><p class="plus">+</p></a>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="tab-pane" id="tab-tipoproducto-2">
+
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Tipo Producto <small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaTipoProducto","TipoProductoCRUD"); }
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddTipoProducto" name="AddTipoProductoCRUD" href="#AddTipoProductoCRUD"><p class=" plus">+</p></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane" id="tab-producto-2">
+
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Productos<small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaProducto","ProductoCRUD"); }
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddProducto" name="AddProductoCRUD" href="#AddProductoCRUD"><p class=" plus">+</p></a>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="tab-pane" id="tab-cliente-2">
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Clientes<small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaCliente","ClienteCRUD"); }
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddCliente" name="AddClienteCRUD" href="#AddClienteCRUD"><p class=" plus">+</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-empresa-2">
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Empresa<small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaEmpresa","EmpresaCRUD"); }
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddEmpresa" name="AddEmpresaCRUD" href="#AddEmpresaCRUD"><p class=" plus">+</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-factura-2">
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Factura <small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaFactura","FacturaCRUD"); }
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddFactura" name="AddFacturaCRUD" href="#AddFacturaCRUD"><p class=" plus">+</p></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="tab-detalleFactura-2">
+                        <div class="card">
+
+                            <div class="card__header">
+                                <h2>Detalle Factura <small>CRUD</small></h2>
+                            </div>
+
+                            <div class="card__body">
+
+                                <div class="body">
+                                    @{Html.RenderAction("_TablaDetalleFactura","DetalleFacturaCRUD"); }
+
+
+                                </div>
+
+
+                            </div>
+                            <div id="floating-button" data-toggle="tooltip" data-placement="left" data-original-title="Crear">
+                                <a id="AddDetalleFactura" name="AddDetalleFacturaCRUD" href="#AddDetalleFacturaCRUD"><p class=" plus">+</p></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+       
+
+
+ </section>
+
+
+
+<div class="popup" id="AddAdminCRUD">
+    @{Html.RenderAction("_AgregarAdmin","AdminCRUD");}
+</div>
+
+<div class="popup" id="AddTipoProductoCRUD">
+    @{Html.RenderAction("_AgregarTipoProducto","TipoProductoCRUD");}
+</div>
+
+<div class="popup" id="AddProductoCRUD">
+    @{Html.RenderAction("_AgregarProducto","ProductoCRUD");}
+</div>
+
+<div class="popup" rel="leanmodal" id="AddClienteCRUD">
+    @{Html.RenderAction("_AgregarCliente","ClienteCRUD");}
+</div>
+
+<div class="popup" id="AddEmpresaCRUD">
+    @{Html.RenderAction("_AgregarEmpresa","EmpresaCRUD");}
+</div>
+
+<div class="popup" id="AddFacturaCRUD">
+    @{Html.RenderAction("_AgregarFactura","FacturaCRUD");}
+</div>
+
+<div class="popup" id="AddDetalleFacturaCRUD">
+    @{Html.RenderAction("_AgregarDetalleFactura","DetalleFacturaCRUD");}
+</div>
+
+
+
+@section Scripts{
+<script type="text/javascript">
+    $("#AddAdmin").leanModal();
+    $("#AddAdmin").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeAdmin" });
+    $("#AddTipoProducto").leanModal();
+    $("#AddTipoProducto").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeTipoProducto" });
+    $("#AddProducto").leanModal();
+    $("#AddProducto").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeProducto" });
+    $("#AddCliente").leanModal();
+    $("#AddCliente").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeCliente" });
+    $("#AddEmpresa").leanModal();
+    $("#AddEmpresa").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeEmpresa" });
+    $("#AddFactura").leanModal();
+    $("#AddFactura").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeFactura" });
+    $("#AddDetalleFactura").leanModal();
+    $("#AddDetalleFactura").leanModal({ top: 200, overlay: 0.4, closeButton: "#closeDetalleFactura" });
+
+
+    $('[class="form-control date-time-picker"]').datetimepicker({
+        format: 'DD-MM-YYYY HH:mm:ss'
+    });
+
+</script>
+}
+

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProyectoP5.Models.DetalleFacturaCRUDModel>
+
+<table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+    <thead>
+        <tr>
+            <th data-column-id="1" data-type="numeric">@Html.DisplayNameFor(model => model.IDDETALLEFACTURA)</th>
+            <th data-column-id="2" data-type="numeric">@Html.DisplayNameFor(model => model.NUMFACTURA)</th>
+            <th data-column-id="4">@Html.DisplayNameFor(model => model.PRODUCTO)</th>
+            <th data-column-id="5" data-order="desc">@Html.DisplayNameFor(model => model.CANTIDADPRODUCTO)</th>
+            <th data-column-id="6" data-order="desc">@Html.DisplayNameFor(model => model.PRECIOPARCIAL)</th>
+            <th data-column-id="7" data-sortable="false">Commands</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IDDETALLEFACTURA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NUMFACTURA)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PRODUCTO)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CANTIDADPRODUCTO)
+                </td>
+                <td>
+                    $@Html.DisplayFor(modelItem => item.PRECIOPARCIAL)
+                </td>
+                <td>
+                    @Html.ActionLink("Editar", "EditarDetalleFactura", new { id = item.IDDETALLEFACTURA }) |
+                    @Html.ActionLink("Eliminar", "DetalleFacturaCRUDDelete", new { id = item.IDDETALLEFACTURA })
+                </td>
+            </tr>
+
+        }
+    </tbody>
+</table>
